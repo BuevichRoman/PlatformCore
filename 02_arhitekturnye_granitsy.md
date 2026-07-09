@@ -25,7 +25,7 @@ Application Layer
   ↓
 Domain Services
   ↓
-Business Process Engine (будущая реализация)
+Business Process Engine
   ↓
 Repositories
   ↓
@@ -74,9 +74,7 @@ Database
 
 ## Business Process Engine
 
-После внедрения становится внутренним механизмом Domain Services.
-
-Business Process Engine определяет допустимые операции над бизнес-процессом, вычисляет результат и генерирует Business Events. Если Business Process Engine реализован на основе FSM — он также определяет допустимые переходы и вычисляет состояние.
+Business Process Engine является внутренним механизмом исполнения бизнес-процессов. Конкретная реализация (CRUD, FSM, Workflow/BPM и др.) не влияет на архитектурные границы Platform Core.
 
 Business Process Engine не взаимодействует напрямую с UI или REST API.
 
