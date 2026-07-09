@@ -18,6 +18,8 @@
 
 Ни один компонент не должен содержать полный сценарий выполнения процесса.
 
+Независимо от реализации Business Process Engine (CRUD, FSM, Workflow/BPM или иной механизм) ни один внешний компонент не должен содержать полный сценарий выполнения бизнес-процесса.
+
 ## Правило 1. Каждый сервис знает только своё действие
 
 Например: `PurchaseService` знает `AddProduct`, `RemoveProduct`, `FinishPurchase`; `CatalogService` знает `UpdateCatalog`, `UpdateStock`; `InventoryService` знает `UpdateHomeInventory`. Ни один сервис не знает полного сценария процесса.
